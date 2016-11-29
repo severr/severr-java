@@ -23,80 +23,62 @@
  */
 
 
-package io.swagger.client.model;
+package io.severr.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
+import io.severr.model.CustomDoubleData;
+import io.severr.model.CustomStringData;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * Error
+ * (optional) Custom string or double data to submit along with the event. This data can then be used in the Severr UI to view segmented data.
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T15:58:56.225-08:00")
-public class Error   {
-  @SerializedName("code")
-  private Integer code = null;
+@ApiModel(description = "(optional) Custom string or double data to submit along with the event. This data can then be used in the Severr UI to view segmented data.")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
+public class CustomData   {
+  @SerializedName("stringData")
+  private CustomStringData stringData = null;
 
-  @SerializedName("message")
-  private String message = null;
+  @SerializedName("doubleData")
+  private CustomDoubleData doubleData = null;
 
-  @SerializedName("fields")
-  private String fields = null;
-
-  public Error code(Integer code) {
-    this.code = code;
+  public CustomData stringData(CustomStringData stringData) {
+    this.stringData = stringData;
     return this;
   }
 
    /**
-   * Get code
-   * @return code
+   * Get stringData
+   * @return stringData
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Integer getCode() {
-    return code;
+  public CustomStringData getStringData() {
+    return stringData;
   }
 
-  public void setCode(Integer code) {
-    this.code = code;
+  public void setStringData(CustomStringData stringData) {
+    this.stringData = stringData;
   }
 
-  public Error message(String message) {
-    this.message = message;
+  public CustomData doubleData(CustomDoubleData doubleData) {
+    this.doubleData = doubleData;
     return this;
   }
 
    /**
-   * Get message
-   * @return message
+   * Get doubleData
+   * @return doubleData
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getMessage() {
-    return message;
+  public CustomDoubleData getDoubleData() {
+    return doubleData;
   }
 
-  public void setMessage(String message) {
-    this.message = message;
-  }
-
-  public Error fields(String fields) {
-    this.fields = fields;
-    return this;
-  }
-
-   /**
-   * Get fields
-   * @return fields
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public String getFields() {
-    return fields;
-  }
-
-  public void setFields(String fields) {
-    this.fields = fields;
+  public void setDoubleData(CustomDoubleData doubleData) {
+    this.doubleData = doubleData;
   }
 
 
@@ -108,25 +90,23 @@ public class Error   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error error = (Error) o;
-    return Objects.equals(this.code, error.code) &&
-        Objects.equals(this.message, error.message) &&
-        Objects.equals(this.fields, error.fields);
+    CustomData customData = (CustomData) o;
+    return Objects.equals(this.stringData, customData.stringData) &&
+        Objects.equals(this.doubleData, customData.doubleData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, fields);
+    return Objects.hash(stringData, doubleData);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error {\n");
+    sb.append("class CustomData {\n");
     
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
-    sb.append("    fields: ").append(toIndentedString(fields)).append("\n");
+    sb.append("    stringData: ").append(toIndentedString(stringData)).append("\n");
+    sb.append("    doubleData: ").append(toIndentedString(doubleData)).append("\n");
     sb.append("}");
     return sb.toString();
   }

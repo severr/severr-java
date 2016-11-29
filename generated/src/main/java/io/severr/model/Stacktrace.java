@@ -23,10 +23,10 @@
  */
 
 
-package io.swagger.client.model;
+package io.severr.model;
 
 import java.util.Objects;
-import io.swagger.client.model.InnerStackTrace;
+import io.severr.model.InnerStackTrace;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Stacktrace
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T15:58:56.225-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
 public class Stacktrace extends ArrayList<InnerStackTrace>  {
 
   @Override

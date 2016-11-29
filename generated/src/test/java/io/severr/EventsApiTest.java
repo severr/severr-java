@@ -23,11 +23,11 @@
  */
 
 
-package io.swagger.client.api;
+package io.severr;
 
 import severr.ApiException;
-import io.swagger.client.model.AppEvent;
-import io.swagger.client.model.Error;
+import io.severr.model.AppEvent;
+import io.severr.model.Error;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -23,7 +23,7 @@
  */
 
 
-package io.swagger.client.model;
+package io.severr.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
@@ -32,41 +32,41 @@ import io.swagger.annotations.ApiModelProperty;
 
 
 /**
- * CustomDoubleData
+ * CustomStringData
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T15:58:56.225-08:00")
-public class CustomDoubleData   {
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
+public class CustomStringData   {
   @SerializedName("customData1")
-  private Double customData1 = null;
+  private String customData1 = null;
 
   @SerializedName("customData2")
-  private Double customData2 = null;
+  private String customData2 = null;
 
   @SerializedName("customData3")
-  private Double customData3 = null;
+  private String customData3 = null;
 
   @SerializedName("customData4")
-  private Double customData4 = null;
+  private String customData4 = null;
 
   @SerializedName("customData5")
-  private Double customData5 = null;
+  private String customData5 = null;
 
   @SerializedName("customData6")
-  private Double customData6 = null;
+  private String customData6 = null;
 
   @SerializedName("customData7")
-  private Double customData7 = null;
+  private String customData7 = null;
 
   @SerializedName("customData8")
-  private Double customData8 = null;
+  private String customData8 = null;
 
   @SerializedName("customData9")
-  private Double customData9 = null;
+  private String customData9 = null;
 
   @SerializedName("customData10")
-  private Double customData10 = null;
+  private String customData10 = null;
 
-  public CustomDoubleData customData1(Double customData1) {
+  public CustomStringData customData1(String customData1) {
     this.customData1 = customData1;
     return this;
   }
@@ -76,15 +76,15 @@ public class CustomDoubleData   {
    * @return customData1
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData1() {
+  public String getCustomData1() {
     return customData1;
   }
 
-  public void setCustomData1(Double customData1) {
+  public void setCustomData1(String customData1) {
     this.customData1 = customData1;
   }
 
-  public CustomDoubleData customData2(Double customData2) {
+  public CustomStringData customData2(String customData2) {
     this.customData2 = customData2;
     return this;
   }
@@ -94,15 +94,15 @@ public class CustomDoubleData   {
    * @return customData2
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData2() {
+  public String getCustomData2() {
     return customData2;
   }
 
-  public void setCustomData2(Double customData2) {
+  public void setCustomData2(String customData2) {
     this.customData2 = customData2;
   }
 
-  public CustomDoubleData customData3(Double customData3) {
+  public CustomStringData customData3(String customData3) {
     this.customData3 = customData3;
     return this;
   }
@@ -112,15 +112,15 @@ public class CustomDoubleData   {
    * @return customData3
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData3() {
+  public String getCustomData3() {
     return customData3;
   }
 
-  public void setCustomData3(Double customData3) {
+  public void setCustomData3(String customData3) {
     this.customData3 = customData3;
   }
 
-  public CustomDoubleData customData4(Double customData4) {
+  public CustomStringData customData4(String customData4) {
     this.customData4 = customData4;
     return this;
   }
@@ -130,15 +130,15 @@ public class CustomDoubleData   {
    * @return customData4
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData4() {
+  public String getCustomData4() {
     return customData4;
   }
 
-  public void setCustomData4(Double customData4) {
+  public void setCustomData4(String customData4) {
     this.customData4 = customData4;
   }
 
-  public CustomDoubleData customData5(Double customData5) {
+  public CustomStringData customData5(String customData5) {
     this.customData5 = customData5;
     return this;
   }
@@ -148,15 +148,15 @@ public class CustomDoubleData   {
    * @return customData5
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData5() {
+  public String getCustomData5() {
     return customData5;
   }
 
-  public void setCustomData5(Double customData5) {
+  public void setCustomData5(String customData5) {
     this.customData5 = customData5;
   }
 
-  public CustomDoubleData customData6(Double customData6) {
+  public CustomStringData customData6(String customData6) {
     this.customData6 = customData6;
     return this;
   }
@@ -166,15 +166,15 @@ public class CustomDoubleData   {
    * @return customData6
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData6() {
+  public String getCustomData6() {
     return customData6;
   }
 
-  public void setCustomData6(Double customData6) {
+  public void setCustomData6(String customData6) {
     this.customData6 = customData6;
   }
 
-  public CustomDoubleData customData7(Double customData7) {
+  public CustomStringData customData7(String customData7) {
     this.customData7 = customData7;
     return this;
   }
@@ -184,15 +184,15 @@ public class CustomDoubleData   {
    * @return customData7
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData7() {
+  public String getCustomData7() {
     return customData7;
   }
 
-  public void setCustomData7(Double customData7) {
+  public void setCustomData7(String customData7) {
     this.customData7 = customData7;
   }
 
-  public CustomDoubleData customData8(Double customData8) {
+  public CustomStringData customData8(String customData8) {
     this.customData8 = customData8;
     return this;
   }
@@ -202,15 +202,15 @@ public class CustomDoubleData   {
    * @return customData8
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData8() {
+  public String getCustomData8() {
     return customData8;
   }
 
-  public void setCustomData8(Double customData8) {
+  public void setCustomData8(String customData8) {
     this.customData8 = customData8;
   }
 
-  public CustomDoubleData customData9(Double customData9) {
+  public CustomStringData customData9(String customData9) {
     this.customData9 = customData9;
     return this;
   }
@@ -220,15 +220,15 @@ public class CustomDoubleData   {
    * @return customData9
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData9() {
+  public String getCustomData9() {
     return customData9;
   }
 
-  public void setCustomData9(Double customData9) {
+  public void setCustomData9(String customData9) {
     this.customData9 = customData9;
   }
 
-  public CustomDoubleData customData10(Double customData10) {
+  public CustomStringData customData10(String customData10) {
     this.customData10 = customData10;
     return this;
   }
@@ -238,11 +238,11 @@ public class CustomDoubleData   {
    * @return customData10
   **/
   @ApiModelProperty(example = "null", value = "")
-  public Double getCustomData10() {
+  public String getCustomData10() {
     return customData10;
   }
 
-  public void setCustomData10(Double customData10) {
+  public void setCustomData10(String customData10) {
     this.customData10 = customData10;
   }
 
@@ -255,17 +255,17 @@ public class CustomDoubleData   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomDoubleData customDoubleData = (CustomDoubleData) o;
-    return Objects.equals(this.customData1, customDoubleData.customData1) &&
-        Objects.equals(this.customData2, customDoubleData.customData2) &&
-        Objects.equals(this.customData3, customDoubleData.customData3) &&
-        Objects.equals(this.customData4, customDoubleData.customData4) &&
-        Objects.equals(this.customData5, customDoubleData.customData5) &&
-        Objects.equals(this.customData6, customDoubleData.customData6) &&
-        Objects.equals(this.customData7, customDoubleData.customData7) &&
-        Objects.equals(this.customData8, customDoubleData.customData8) &&
-        Objects.equals(this.customData9, customDoubleData.customData9) &&
-        Objects.equals(this.customData10, customDoubleData.customData10);
+    CustomStringData customStringData = (CustomStringData) o;
+    return Objects.equals(this.customData1, customStringData.customData1) &&
+        Objects.equals(this.customData2, customStringData.customData2) &&
+        Objects.equals(this.customData3, customStringData.customData3) &&
+        Objects.equals(this.customData4, customStringData.customData4) &&
+        Objects.equals(this.customData5, customStringData.customData5) &&
+        Objects.equals(this.customData6, customStringData.customData6) &&
+        Objects.equals(this.customData7, customStringData.customData7) &&
+        Objects.equals(this.customData8, customStringData.customData8) &&
+        Objects.equals(this.customData9, customStringData.customData9) &&
+        Objects.equals(this.customData10, customStringData.customData10);
   }
 
   @Override
@@ -276,7 +276,7 @@ public class CustomDoubleData   {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class CustomDoubleData {\n");
+    sb.append("class CustomStringData {\n");
     
     sb.append("    customData1: ").append(toIndentedString(customData1)).append("\n");
     sb.append("    customData2: ").append(toIndentedString(customData2)).append("\n");

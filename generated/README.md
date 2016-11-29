@@ -61,7 +61,7 @@ Please follow the [installation](#installation) instruction and execute the foll
 import severr.*;
 import severr.auth.*;
 import severr.model.*;
-import io.swagger.client.api.EventsApi;
+import io.severr.EventsApi;
 
 import java.io.File;
 import java.util.*;

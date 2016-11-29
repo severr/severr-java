@@ -23,19 +23,19 @@
  */
 
 
-package io.swagger.client.model;
+package io.severr.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
+import io.severr.model.StackTraceLines;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.StackTraceLines;
 
 
 /**
  * InnerStackTrace
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T15:58:56.225-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
 public class InnerStackTrace   {
   @SerializedName("type")
   private String type = null;

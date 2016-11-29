@@ -23,7 +23,7 @@
  */
 
 
-package io.swagger.client.api;
+package io.severr;
 
 import severr.ApiCallback;
 import severr.ApiClient;
@@ -38,8 +38,8 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
-import io.swagger.client.model.AppEvent;
-import io.swagger.client.model.Error;
+import io.severr.model.AppEvent;
+import io.severr.model.Error;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

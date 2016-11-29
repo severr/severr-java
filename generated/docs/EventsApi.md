@@ -19,7 +19,7 @@ Submit an application event or error to Severr
 ```java
 // Import classes:
 //import severr.ApiException;
-//import io.swagger.client.api.EventsApi;
+//import io.severr.EventsApi;
 
 
 EventsApi apiInstance = new EventsApi();
