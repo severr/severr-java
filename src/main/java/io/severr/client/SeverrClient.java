@@ -102,6 +102,24 @@ public class SeverrClient {
     }
 
     /**
+     * Send exception to Severr asynchronously by creating a new AppEvent and populating the stack trace.
+     *
+     * @param classification Classification like Error/Warn/Info/Debug
+     * @param e exception
+     * @param callback callback result to the async call
+     * @throws RuntimeException when an error occurs sending the exception
+     */
+    public void sendExceptionAsync(String classification, Throwable e, ApiCallback<Void> callback) {
+        AppEvent event = createAppEvent(classification, e.getClass().getName(), e.getMessage());
+        event.setEventStacktrace(EventTraceBuilder.getEventTraces(e));;
+        try {
+            sendEventAsync(event, callback);
+        } catch (ApiException apiException) {
+            throw new RuntimeException(apiException.getMessage(), apiException);
+        }
+    }
+
+    /**
      * Send the AppEvent to Severr. If any of the parameters supplied in the constructor are not present, this will auto-populate those members on the supplied event before sending the event to Severr.
      *
      * @param appEvent The event to send
