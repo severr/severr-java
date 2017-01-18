@@ -58,10 +58,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import severr.*;
-import severr.auth.*;
-import severr.model.*;
-import io.severr.EventsApi;
+import trakerr.*;
+import trakerr.auth.*;
+import trakerr.model.*;
+import io.trakerr.EventsApi;
 
 import java.io.File;
 import java.util.*;
@@ -85,11 +85,11 @@ public class EventsApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://www.severr.io/api/v1*
+All URIs are relative to *https://www.trakerr.io/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*EventsApi* | [**eventsPost**](docs/EventsApi.md#eventsPost) | **POST** /events | Submit an application event or error to Severr
+*EventsApi* | [**eventsPost**](docs/EventsApi.md#eventsPost) | **POST** /events | Submit an application event or error to Trakerr
 
 
 ## Documentation for Models

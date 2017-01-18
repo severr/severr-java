@@ -1,4 +1,4 @@
-# severr-java-client
+# trakerr-java-client
 
 ## Requirements
 
@@ -10,8 +10,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>io.severr</groupId>
-    <artifactId>severr-java-client</artifactId>
+    <groupId>io.trakerr</groupId>
+    <artifactId>trakerr-java-client</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
@@ -23,15 +23,15 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-package io.severr.client;
+package io.trakerr.client;
 
-import io.severr.model.AppEvent;
+import io.trakerr.model.AppEvent;
 import org.apache.log4j.Logger;
-import severr.ApiException;
-import severr.ApiResponse;
+import trakerr.ApiException;
+import trakerr.ApiResponse;
 
-public class SampleSeverrApp {
-    private static Logger logger = Logger.getLogger(SampleSeverrApp.class.getName());
+public class SampleTrakerrApp {
+    private static Logger logger = Logger.getLogger(SampleTrakerrApp.class.getName());
 
     public static void main(String[] args) {
 
@@ -39,7 +39,7 @@ public class SampleSeverrApp {
         logger.error("This is a test log4j exception.", new Exception("Test log4j exception."));
 
         // Option-2: Send an event manually.
-        SeverrClient client = new SeverrClient("62d0e191408b397262a7748c10579f5f38661405883", null, null, null, null, null, null, null, null, null);
+        TrakerrClient client = new TrakerrClient("62d0e191408b397262a7748c10579f5f38661405883", null, null, null, null, null, null, null, null, null);
         AppEvent event = client.createAppEvent("Error", "foo", "bar");
         try {
             ApiResponse<Void> response = client.sendEvent(event);

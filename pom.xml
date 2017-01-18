@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-  <description>severr.io java client -- Send your analytics events to severr.io using this library.</description>
-  <url>https://github.com/severr/severr-java</url>
+  <description>trakerr.io java client -- Send your analytics events to trakerr.io using this library.</description>
+  <url>https://github.com/trakerr/trakerr-java</url>
   <licenses>
     <license>
       <name>Apache License, Version 2.0</name>
@@ -13,21 +13,21 @@
   </licenses>
   <developers>
     <developer>
-      <id>severr</id>
-      <name>Severr</name>
-      <email>dev@severr.io</email>
-      <url>http://severr.io</url>
-      <organization>Severr</organization>
-      <organizationUrl>http://severr.io</organizationUrl>
+      <id>trakerr</id>
+      <name>Trakerr</name>
+      <email>dev@trakerr.io</email>
+      <url>http://trakerr.io</url>
+      <organization>Trakerr</organization>
+      <organizationUrl>http://trakerr.io</organizationUrl>
       <timezone>America/Seattle</timezone>
     </developer>
   </developers>
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.severr</groupId>
-  <artifactId>severr-java-client</artifactId>
+  <groupId>io.trakerr</groupId>
+  <artifactId>trakerr-java-client</artifactId>
   <packaging>jar</packaging>
-  <name>severr-java-client</name>
+  <name>trakerr-java-client</name>
   <version>1.0.0</version>
   <scm>
     <connection>scm:git:git@github.com:swagger-api/swagger-mustache.git</connection>
