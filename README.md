@@ -1,8 +1,8 @@
 # trakerr-java-client
 
-## Requirements
+## Installation
 
-Building the API client library requires [Maven](https://maven.apache.org/) to be installed.
+Install the Maven client dependency.
 
 ### Maven users
 
@@ -19,27 +19,50 @@ Add this dependency to your project's POM:
 
 ## Getting Started
 
-Please follow the [installation](#installation) instruction and execute the following Java code:
+First, make sure you have the [Maven](#installation) dependency installed as described above.
+
+There are a few options to send exceptions and other events to Trakerr.
+
+### Option-1: Use log4j
+
+Add a log4j appender as shown below to your log4j.properties
+
+```
+log4j.rootLogger=WARN, trakerr
+
+log4j.appender.trakerr=io.trakerr.client.TrakerrAppender
+#log4j.appender.trakerr.url=https://trakerr.io/api/v1
+log4j.appender.trakerr.apiKey=<your Trakerr API key>
+log4j.appender.trakerr.appVersion=1.0
+log4j.appender.trakerr.env=development
+#log4j.appender.trakerr.env=production
+#log4j.appender.trakerr.env=test
+log4j.appender.trakerr.enabled=true
+log4j.appender.trakerr.useAsync=true
+```
+
+Once installed any logging that is WARN or above gets logged. You are free to modify the logging levels as per your requirements.
+
+### Option-2: Send an exception programmatically
+
+Sending an exception programmatically requires a TrakerrClient to send the error to Trakerr. The example below illustrates how to do this.
 
 ```java
+        TrakerrClient client = new TrakerrClient("<your trakerr api key>", "1.0", "development", "1.0");
 
-package io.trakerr.client;
+        try {
+            throw new Exception("This is a test exception.");
+        } catch (Exception e) {
+            // First argument is the classification ("Error", "Warn" etc.), you can also pass a custom classification if required
+            client.sendException("Error", e);
+        }
+```
 
-import io.trakerr.model.AppEvent;
-import org.apache.log4j.Logger;
-import trakerr.ApiException;
-import trakerr.ApiResponse;
+### Option-3: Send a non-exception (any event) programmatically
 
-public class SampleTrakerrApp {
-    private static Logger logger = Logger.getLogger(SampleTrakerrApp.class.getName());
+```java
+        TrakerrClient client = new TrakerrClient("<your trakerr api key>", "1.0", "development", "1.0");
 
-    public static void main(String[] args) {
-
-        // Option-1: Use log4j
-        logger.error("This is a test log4j exception.", new Exception("Test log4j exception."));
-
-        // Option-2: Send an event manually.
-        TrakerrClient client = new TrakerrClient("62d0e191408b397262a7748c10579f5f38661405883", null, null, null, null, null, null, null, null, null);
         AppEvent event = client.createAppEvent("Error", "foo", "bar");
         try {
             ApiResponse<Void> response = client.sendEvent(event);
@@ -48,15 +71,6 @@ public class SampleTrakerrApp {
         } catch (ApiException e) {
             e.printStackTrace();
         }
-
-        // Option-3: Throw exception.
-        try {
-            throw new Exception("This is a test exception.");
-        } catch(Exception e) {
-            client.sendException("Error", e);
-        }
-    }
-}
 
 ```
 

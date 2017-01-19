@@ -31,6 +31,21 @@ public class TrakerrClient {
      * Initialize a new instance of TrakerrClient with specified options. If null is passed to any of the optional parameters, the defaults are used.
      *
      * @param apiKey                  (required) Specify the API key for this application
+     * @param contextAppVersion       (optional) application version, defaults to 1.0
+     * @param contextEnvName          (optional) environment name like "development", "staging", "production", defaults to "development"
+     * @param contextEnvVersion       (optional) environment version
+     */
+    public TrakerrClient(String apiKey, String contextAppVersion, String contextEnvName, String contextEnvVersion) {
+        this.apiKey = apiKey;
+        this.contextAppVersion = contextAppVersion == null ? "1.0" : contextAppVersion;
+        this.contextEnvName = contextEnvName == null ? "development" : contextEnvName;
+        this.contextEnvVersion = contextEnvVersion;
+    }
+
+    /**
+     * Initialize a new instance of TrakerrClient with specified options. If null is passed to any of the optional parameters, the defaults are used.
+     *
+     * @param apiKey                  (required) Specify the API key for this application
      * @param url                     (optional) URL to the Trakerr host, pass null to use default
      * @param contextAppVersion       (optional) application version, defaults to 1.0
      * @param contextEnvName          (optional) environment name like "development", "staging", "production", defaults to "development"

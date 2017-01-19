@@ -1,14 +1,9 @@
 package io.trakerr.client;
 
-import io.trakerr.model.AppEvent;
 import org.apache.log4j.Logger;
-import trakerr.ApiCallback;
-import trakerr.ApiException;
-import trakerr.ApiResponse;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.*;
 
 public class SampleTrakerrApp {
@@ -16,42 +11,29 @@ public class SampleTrakerrApp {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
+        TrakerrClient client = new TrakerrClient("<your api key>", "1.0", "development", "1.0");
+
         // Option-1: Use log4j
-        //logger.error("This is a test log4j exception.", new Exception("Test log4j exception."));
+        logger.error("This is a test log4j exception.", new Exception("Test log4j exception."));
 
-        ExecutorService pool = Executors.newFixedThreadPool(20);
-        ///*
-        // Option-2: Send an event manually.
-        List<Future<Object>> submits = new ArrayList<Future<Object>>();
-
-        for(int j = 0; j < 20; j++) {
-            final int finalJ = j;
-            Future<Object> submit = pool.submit(new Callable<Object>() {
-                @Override
-                public Object call() throws Exception {
-                    TrakerrClient client = new TrakerrClient("5253581baed17315b0e41d62939f924511503356201105", "http://ec2-52-91-176-104.compute-1.amazonaws.com/api/v1", null, null, null, null, null, null, null, null);
-
-                    // Option-3: Throw exception.
-
-                    try {
-                        throw new Exception("This is a test exception.");
-                    } catch (Exception e) {
-                        for (int i = 0; i < 10; i++) {
-                            final long t1 = System.nanoTime();
-                            client.sendException("Error data " + (i * finalJ), e);
-                            final long t2 = System.nanoTime();
-                            System.out.println("Sent[" + finalJ + "]: " + (i * finalJ) + " time (in ms): " + (t2-t1)/1000000);
-                        }
-                    }//*/
-                    return null;
-                }
-            });
-
-            submits.add(submit);
+        /*
+        // Option-2: Throw exception.
+        try {
+            throw new Exception("This is a test exception.");
+        } catch(Exception e) {
+            client.sendException("Error", e);
         }
 
-        for (Future<Object> submit: submits) {
-            submit.get();
+        // Option-3: Send an event (including non-exceptions) manually.
+        TrakerrClient client = new TrakerrClient("<your api key>", "1.0", "development", "1.0");
+        AppEvent event = client.createAppEvent("Error", "System.Exception", "Some message");
+        try {
+            ApiResponse<Void> response = client.sendEvent(event);
+
+            System.out.println("Sent event: " + response.getStatusCode() + ", data: " + response.toString());
+        } catch (ApiException e) {
+            e.printStackTrace();
         }
+        */
     }
 }
