@@ -23,9 +23,9 @@
  */
 
 
-package trakerr.auth;
+package io.trakerr.auth;
 
-import trakerr.Pair;
+import io.trakerr.Pair;
 
 import com.squareup.okhttp.Credentials;
 

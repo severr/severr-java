@@ -23,7 +23,7 @@
  */
 
 
-package trakerr;
+package io.trakerr;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
@@ -86,10 +86,10 @@ import javax.net.ssl.X509TrustManager;
 import okio.BufferedSink;
 import okio.Okio;
 
-import trakerr.auth.Authentication;
-import trakerr.auth.HttpBasicAuth;
-import trakerr.auth.ApiKeyAuth;
-import trakerr.auth.OAuth;
+import io.trakerr.auth.Authentication;
+import io.trakerr.auth.HttpBasicAuth;
+import io.trakerr.auth.ApiKeyAuth;
+import io.trakerr.auth.OAuth;
 
 public class ApiClient {
     public static final double JAVA_VERSION;

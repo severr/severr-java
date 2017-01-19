@@ -27,15 +27,15 @@ package io.trakerr.model;
 
 import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
-import io.trakerr.model.StackTraceLines;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.trakerr.model.StackTraceLines;
 
 
 /**
  * InnerStackTrace
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2017-01-19T10:48:29.731-08:00")
 public class InnerStackTrace   {
   @SerializedName("type")
   private String type = null;

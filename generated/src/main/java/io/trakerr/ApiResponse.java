@@ -23,7 +23,7 @@
  */
 
 
-package trakerr;
+package io.trakerr;
 
 import java.util.List;
 import java.util.Map;

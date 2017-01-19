@@ -23,29 +23,19 @@
  */
 
 
-package trakerr.auth;
+package io.trakerr.auth;
 
-import trakerr.Pair;
+import io.trakerr.Pair;
 
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-28T12:03:30.429-08:00")
-public class OAuth implements Authentication {
-  private String accessToken;
-
-  public String getAccessToken() {
-    return accessToken;
-  }
-
-  public void setAccessToken(String accessToken) {
-    this.accessToken = accessToken;
-  }
-
-  @Override
-  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
-    if (accessToken != null) {
-      headerParams.put("Authorization", "Bearer " + accessToken);
-    }
-  }
+public interface Authentication {
+    /**
+     * Apply authentication settings to header and query params.
+     *
+     * @param queryParams List of query parameters
+     * @param headerParams Map of header parameters
+     */
+    void applyToParams(List<Pair> queryParams, Map<String, String> headerParams);
 }

@@ -1,12 +1,8 @@
 package io.trakerr.client;
 
 import com.squareup.okhttp.Call;
-import io.trakerr.EventsApi;
+import io.trakerr.*;
 import io.trakerr.model.AppEvent;
-import trakerr.ApiCallback;
-import trakerr.ApiClient;
-import trakerr.ApiException;
-import trakerr.ApiResponse;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

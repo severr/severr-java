@@ -23,7 +23,7 @@
  */
 
 
-package trakerr;
+package io.trakerr;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

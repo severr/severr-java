@@ -58,9 +58,9 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import trakerr.*;
-import trakerr.auth.*;
-import trakerr.model.*;
+import io.trakerr.*;
+import io.trakerr.auth.*;
+import io.trakerr.model.*;
 import io.trakerr.EventsApi;
 
 import java.io.File;

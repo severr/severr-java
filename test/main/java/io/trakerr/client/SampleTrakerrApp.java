@@ -1,5 +1,8 @@
 package io.trakerr.client;
 
+import io.trakerr.ApiException;
+import io.trakerr.ApiResponse;
+import io.trakerr.model.AppEvent;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -11,10 +14,11 @@ public class SampleTrakerrApp {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        TrakerrClient client = new TrakerrClient("<your api key>", "1.0", "development", "1.0");
-
         // Option-1: Use log4j
         logger.error("This is a test log4j exception.", new Exception("Test log4j exception."));
+
+        // create a client
+        TrakerrClient client = new TrakerrClient("<your api key>", "1.0", "development", "1.0");
 
         /*
         // Option-2: Throw exception.
@@ -25,7 +29,6 @@ public class SampleTrakerrApp {
         }
 
         // Option-3: Send an event (including non-exceptions) manually.
-        TrakerrClient client = new TrakerrClient("<your api key>", "1.0", "development", "1.0");
         AppEvent event = client.createAppEvent("Error", "System.Exception", "Some message");
         try {
             ApiResponse<Void> response = client.sendEvent(event);
@@ -35,5 +38,6 @@ public class SampleTrakerrApp {
             e.printStackTrace();
         }
         */
+
     }
 }

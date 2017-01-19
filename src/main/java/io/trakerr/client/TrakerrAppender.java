@@ -1,11 +1,11 @@
 package io.trakerr.client;
 
+import io.trakerr.ApiCallback;
+import io.trakerr.ApiException;
 import io.trakerr.model.AppEvent;
 import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.spi.LoggingEvent;
 import org.apache.log4j.spi.ThrowableInformation;
-import trakerr.ApiCallback;
-import trakerr.ApiException;
 
 import java.util.List;
 import java.util.Map;
